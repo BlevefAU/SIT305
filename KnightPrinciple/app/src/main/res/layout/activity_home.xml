@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg2"
+    tools:context="com.example.bleve.knightprinciple.home">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/navbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/black"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
+    <ImageView
+        android:id="@+id/menu"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="8dp"
+        app:srcCompat="@drawable/menu" />
+
+    <ImageView
+        android:id="@+id/home"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/menu"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/home" />
+
+    <ImageView
+        android:id="@+id/map"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/home"
+        android:layout_marginEnd="47dp"
+        app:srcCompat="@drawable/map" />
+
+    <FrameLayout
+        android:id="@+id/box1"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginBottom="20dp"
+        android:background="?attr/colorButtonNormal"
+        android:clipToPadding="false"
+        android:layout_above="@+id/box2"
+        android:layout_alignStart="@+id/box2">
+
+        <TextView
+            android:id="@+id/label1"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:gravity="center"
+            android:text="Equipment"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/clothes"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignEnd="@+id/box1"
+            android:layout_alignTop="@+id/box1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="90dp"
+            app:srcCompat="@drawable/clothes" />
+
+        <ImageView
+            android:id="@+id/sword"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="40dp"
+            app:srcCompat="@drawable/swords" />
+
+        <ImageView
+            android:id="@+id/ring"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="140dp"
+            app:srcCompat="@drawable/ring" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/box2"
+        android:layout_width="180dp"
+        android:layout_height="250dp"
+        android:layout_alignEnd="@+id/home"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="13dp"
+        android:layout_marginEnd="20dp"
+        android:background="?attr/colorButtonNormal">
+
+        <TextView
+            android:id="@+id/label2"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:gravity="center"
+            android:text="Status"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/hp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="40dp"
+            app:srcCompat="@drawable/power" />
+
+        <ImageView
+            android:id="@+id/mp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="90dp"
+            app:srcCompat="@drawable/magic" />
+
+        <ImageView
+            android:id="@+id/dexterity"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="140dp"
+            app:srcCompat="@drawable/dexterity" />
+
+        <ImageView
+            android:id="@+id/luck"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="190dp"
+            app:srcCompat="@drawable/luck" />
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/c1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/navbar"
+        android:layout_marginStart="80dp"
+        android:layout_toEndOf="@+id/menu"
+        app:srcCompat="@drawable/c1" />
+
+</RelativeLayout>
