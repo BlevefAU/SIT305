@@ -11,6 +11,8 @@ public class home extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        // define animation
         final Animation topdownan = AnimationUtils.loadAnimation(this,R.animator.topdown);
         final Animation downtopan = AnimationUtils.loadAnimation(this,R.animator.downtop);
 
@@ -18,8 +20,12 @@ public class home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        // define value
         final ImageView c1 = (ImageView) findViewById(R.id.c1);
+        final character player = new character();
 
+
+        // animation of character
         c1.startAnimation(topdownan);
         topdownan.setAnimationListener(new Animation.AnimationListener() {
             @Override
@@ -56,6 +62,11 @@ public class home extends AppCompatActivity {
         });
 
 
+
+    }
+
+    @Override
+    public void onBackPressed() {
 
     }
 }

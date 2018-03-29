@@ -12,13 +12,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         //Intialization Button
-
         Button startbtn = (Button) findViewById(R.id.start);
-
+        // when start a new game jump to show up background story
         startbtn.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                startActivity(new Intent(MainActivity.this, home.class));
+                startActivity(new Intent(MainActivity.this, bg_story.class));
             }
         });
     }

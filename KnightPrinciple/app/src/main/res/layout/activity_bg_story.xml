@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4f4f4f"
+    tools:context="com.example.bleve.knightprinciple.bg_story">
+
+    <TextView
+        android:id="@+id/bg_story"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="71dp"
+        android:text="In the middle age, a dark mage revives the king of darkness. Due to the revival of the king, many monsters come out from hell to attack people and search for their king. Our protagonist is a young man who just weak up from the unconscious in a small village. He can’t remember anything and do not have any idea who he is. Only one thing in his mind is that he has to reach “Atlas” And the story begins…."
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="26sp" />
+</RelativeLayout>
