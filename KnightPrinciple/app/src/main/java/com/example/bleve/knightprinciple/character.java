@@ -5,6 +5,7 @@ package com.example.bleve.knightprinciple;
  */
 
 public class character {
+    // init attributes
     public int level = 1;
     public int experiences = 0;
     public double health = 50;

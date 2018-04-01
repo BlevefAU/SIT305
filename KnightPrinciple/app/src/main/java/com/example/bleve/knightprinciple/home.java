@@ -9,8 +9,12 @@ import android.widget.ImageView;
 
 public class home extends AppCompatActivity {
 
+    DatabaseConnect connectionClass;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        character player = new character();
 
         // define animation
         final Animation topdownan = AnimationUtils.loadAnimation(this,R.animator.topdown);
@@ -22,7 +26,6 @@ public class home extends AppCompatActivity {
 
         // define value
         final ImageView c1 = (ImageView) findViewById(R.id.c1);
-        final character player = new character();
 
 
         // animation of character
@@ -60,6 +63,7 @@ public class home extends AppCompatActivity {
 
             }
         });
+
 
 
 
