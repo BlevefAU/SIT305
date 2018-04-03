@@ -1,11 +1,15 @@
 package com.example.bleve.knightprinciple;
 
 import android.media.Image;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MotionEvent;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class home extends AppCompatActivity {
 
@@ -26,6 +30,7 @@ public class home extends AppCompatActivity {
 
         // define value
         final ImageView c1 = (ImageView) findViewById(R.id.c1);
+        final TextView text = (TextView) findViewById(R.id.text);
 
 
         // animation of character
@@ -64,13 +69,24 @@ public class home extends AppCompatActivity {
             }
         });
 
-
-
-
+        text.setText("Em... Where am I?");
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                text.setText("My head really hurt...I am in a house? I should go out and see if there is any people.(Leave the house by click the map icon in the top right)");
+            }
+        }, 2000);
     }
 
     @Override
     public void onBackPressed() {
 
     }
+    public boolean onTouchEvent(MotionEvent e) {
+        final TextView text = (TextView) findViewById(R.id.text);
+        text.setVisibility(View.INVISIBLE);
+        return false;
+    }
+
 }

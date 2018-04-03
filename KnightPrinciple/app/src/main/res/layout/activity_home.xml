@@ -159,6 +159,9 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:background="#444444"
+        android:gravity="center"
+        android:text="test"
+        android:textAlignment="center"
         android:textColor="@android:color/background_light" />
 
 </RelativeLayout>
