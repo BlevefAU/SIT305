@@ -17,7 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".home" />
-        <activity android:name=".bg_story"></activity>
+        <activity android:name=".bg_story" />
+        <activity android:name=".big_map" />
+        <activity android:name=".first_map"></activity>
     </application>
 
 </manifest>

@@ -17,6 +17,15 @@
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme" />
 
+    <Button
+        android:id="@+id/map"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="56dp"
+        android:background="@drawable/map"
+        android:layout_alignTop="@+id/home"
+        android:layout_alignParentEnd="true" />
+
     <ImageView
         android:id="@+id/menu"
         android:layout_width="40dp"
@@ -31,18 +40,9 @@
         android:id="@+id/home"
         android:layout_width="40dp"
         android:layout_height="40dp"
+        app:srcCompat="@drawable/home"
         android:layout_alignTop="@+id/menu"
-        android:layout_centerHorizontal="true"
-        app:srcCompat="@drawable/home" />
-
-    <ImageView
-        android:id="@+id/map"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/home"
-        android:layout_marginEnd="47dp"
-        app:srcCompat="@drawable/map" />
+        android:layout_centerHorizontal="true" />
 
     <FrameLayout
         android:id="@+id/box1"
