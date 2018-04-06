@@ -13,18 +13,18 @@ import android.widget.TextView;
 
 class DatabaseConnect extends SQLiteOpenHelper {
     public DatabaseConnect(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
-        super(context, "userdata.db", factory, version);
+        super(context, "playerdata.db", factory, version);
     }
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         // create table USER
-        sqLiteDatabase.execSQL("CREATE TABLE USER( USERNAME INTEGER PRIMARY KEY AUTOINCREMENT, PASSWORD TEXT, CONTEXT TEXT);");
+        sqLiteDatabase.execSQL("CREATE TABLE player();");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
-        sqLiteDatabase.execSQL("DROP TABLE IF EXIST USER;");
+        sqLiteDatabase.execSQL("DROP TABLE IF EXIST player;");
         onCreate(sqLiteDatabase);
     }
 

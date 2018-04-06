@@ -18,5 +18,8 @@ public class character {
     public int mercy = 0;
     public int loveone = 0;
     public int lovetwo = 0;
+    public int weapon_add = 0;
+    public int clothes_add = 0;
+    public int ring_add = 0;
 
 }
