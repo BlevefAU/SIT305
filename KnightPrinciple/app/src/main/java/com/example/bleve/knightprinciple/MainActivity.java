@@ -7,17 +7,18 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-
+    DatabaseConnect connectionClass;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        connectionClass = new DatabaseConnect(this,"",null,1);
         //Intialization Button
         Button startbtn = (Button) findViewById(R.id.start);
         // when start a new game jump to show up background story
         startbtn.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
+                connectionClass.start_game();
                 startActivity(new Intent(MainActivity.this, bg_story.class));
             }
         });

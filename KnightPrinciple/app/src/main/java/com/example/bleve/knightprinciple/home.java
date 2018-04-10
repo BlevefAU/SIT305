@@ -34,8 +34,8 @@ public class home extends AppCompatActivity {
         final ImageView c1 = (ImageView) findViewById(R.id.c1);
         final TextView text = (TextView) findViewById(R.id.text);
 
-        Button btn_map = (Button) findViewById(R.id.map);
-        btn_map.setOnClickListener(new View.OnClickListener() {
+        Button btn_house = (Button) findViewById(R.id.home);
+        btn_house.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(home.this, first_map.class));
@@ -84,9 +84,9 @@ public class home extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                text.setText("My head really hurt...I am in a house? I should go out and see if there is any people.(Leave the house by click the map icon in the top right)");
+                text.setText("My head really hurt...I am in a house? I should go out and see if there is any people.(Leave by click the house icon in the top)");
             }
-        }, 2000);
+        }, 3000);
     }
 
     @Override

@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.view.View;
 import android.widget.TextView;
 
 /**
@@ -16,10 +17,11 @@ class DatabaseConnect extends SQLiteOpenHelper {
         super(context, "playerdata.db", factory, version);
     }
 
+
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         // create table USER
-        sqLiteDatabase.execSQL("CREATE TABLE player();");
+        sqLiteDatabase.execSQL("CREATE TABLE player(LEVEL INTEGER, EXPERIENCES INTEGER, HEALTH INTEGER, MAGIC INTEGER, DEXTERITY INTEGER, LUCK INTEGER, ATTACK INTEGER, CIRT_HIT INTEGER, MAGIC_DAMAGE INTEGER, MERCY INTEGER, LOVEONE INTEGER, LOVETWO INTEGER);");
     }
 
     @Override
@@ -28,5 +30,23 @@ class DatabaseConnect extends SQLiteOpenHelper {
         onCreate(sqLiteDatabase);
     }
 
+    public void start_game() {
+        ContentValues cv = new ContentValues();
+        cv.put("LEVEL", 1);
+        cv.put("EXPERIENCES", 0);
+        cv.put("HEALTH", 0);
+        cv.put("MAGIC", 0);
+        cv.put("DEXTERITY", 0);
+        cv.put("LUCK", 0);
+        cv.put("ATTACK", 0);
+        cv.put("CIRT_HIT", 0);
+        cv.put("MAGIC_DAMAGE", 0);
+        cv.put("MERCY", 0);
+        cv.put("LOVEONE", 0);
+        cv.put("LOVETWO", 0);
+
+        //
+        this.getWritableDatabase().insertOrThrow("player", "", cv);
+    }
 
 }
