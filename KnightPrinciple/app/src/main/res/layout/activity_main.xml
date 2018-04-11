@@ -7,6 +7,19 @@
     android:background="@drawable/bg1"
     tools:context="com.example.bleve.knightprinciple.MainActivity">
 
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="72dp"
+        android:gravity="center_vertical"
+        android:text="No data can loading"
+        android:textColor="@color/colorAccent"
+        android:textSize="36sp"
+        android:visibility="invisible" />
+
     <ImageView
         android:id="@+id/logo"
         android:layout_width="wrap_content"
