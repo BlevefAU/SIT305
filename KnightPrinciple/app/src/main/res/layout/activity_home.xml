@@ -38,11 +38,11 @@
         android:id="@+id/menu"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginStart="15dp"
-        android:background="@drawable/menu"
         android:layout_alignBottom="@+id/navbar"
         android:layout_alignStart="@+id/box1"
-        android:layout_marginBottom="7dp" />
+        android:layout_marginBottom="7dp"
+        android:layout_marginStart="50dp"
+        android:background="@drawable/menu" />
 
     <Button
         android:id="@+id/map"
