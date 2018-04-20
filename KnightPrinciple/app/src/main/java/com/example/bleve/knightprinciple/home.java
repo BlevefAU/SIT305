@@ -1,10 +1,12 @@
 package com.example.bleve.knightprinciple;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.media.Image;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.Animation;
@@ -33,6 +35,9 @@ public class home extends AppCompatActivity {
         // define value
         final ImageView c1 = (ImageView) findViewById(R.id.c1);
         final TextView text = (TextView) findViewById(R.id.text);
+
+        //database
+        connectionClass = new DatabaseConnect(this,"",null,1);
 
         Button btn_house = (Button) findViewById(R.id.home);
         btn_house.setOnClickListener(new View.OnClickListener() {
@@ -79,14 +84,23 @@ public class home extends AppCompatActivity {
             }
         });
 
-        text.setText("Em... Where am I?");
-        final Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                text.setText("My head really hurt...I am in a house? I should go out and see if there is any people.(Leave by click the house icon in the top)");
-            }
-        }, 3000);
+        Cursor res;
+        res = connectionClass.load_process();
+        res.moveToFirst();
+
+        if (Integer.parseInt(String.valueOf(res.getString(0))) == 0) {
+            text.setText("Em... Where am I?");
+            final Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    text.setText("My head really hurt...I am in a house? I should go out and see if there is any people.(Leave by click the house icon in the top)");
+                }
+            }, 3000);
+        } else if(Integer.parseInt(String.valueOf(res.getString(0))) == 1){
+
+        }
+
     }
 
     @Override

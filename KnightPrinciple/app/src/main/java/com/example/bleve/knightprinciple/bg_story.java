@@ -32,7 +32,7 @@ public class bg_story extends AppCompatActivity {
             public void run() {
                 startActivity(new Intent(bg_story.this, home.class));
             }
-        }, 5000);
+        }, 500);
     }
 
     // disable back arrow function

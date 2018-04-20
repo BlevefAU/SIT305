@@ -50,7 +50,7 @@ public class DatabaseConnect extends SQLiteOpenHelper{
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        sqLiteDatabase.execSQL("CREATE TABLE PLAYER( ID INTEGER PRIMARY KEY AUTOINCREMENT, MERCY TEXT, LOVEONE TEXT, LOVETWO TEXT, PROCESS TEXT);");
+        sqLiteDatabase.execSQL("CREATE TABLE PLAYER( ID INTEGER PRIMARY KEY AUTOINCREMENT, MERCY TEXT, LOVEONE TEXT, LOVETWO TEXT, PROCESS TEXT, ITEM TEXT);");
     }
 
     @Override
@@ -67,11 +67,13 @@ public class DatabaseConnect extends SQLiteOpenHelper{
         cv.put("LOVEONE", "0");
         cv.put("LOVETWO", "0");
         cv.put("PROCESS", "0");
+        cv.put("ITEM", "");
         ContentValues cv2 = new ContentValues();
         cv2.put("MERCY", "0");
         cv2.put("LOVEONE", "0");
         cv2.put("LOVETWO", "0");
         cv2.put("PROCESS", "0");
+        cv.put("ITEM", "");
         if (!(cursor.moveToFirst())) {
             this.getWritableDatabase().insertOrThrow("PLAYER", "", cv);
         } else {
@@ -86,6 +88,40 @@ public class DatabaseConnect extends SQLiteOpenHelper{
         } else {
             return 1;
         }
+    }
+
+    // every page will need to check process to give different function
+    public Cursor load_process(){
+        Cursor cursor = this.getReadableDatabase().rawQuery("SELECT PROCESS FROM PLAYER WHERE (ID = 0)", null);
+        if (cursor.moveToFirst()) {
+            return cursor;
+        }
+        return null;
+    }
+
+    // when something happen process change
+    public void update_process(String str){
+        ContentValues cv = new ContentValues();
+        cv.put("PROCESS", str);
+        this.getWritableDatabase().update("PLAYER", cv, "ID = 0" , null);
+    }
+
+    // when the time require some item
+    public String load_item(){
+        Cursor cursor = this.getReadableDatabase().rawQuery("SELECT ITEM FROM PLAYER WHERE (ID = 0)", null);
+        if (cursor.moveToFirst()) {
+            return String.valueOf(cursor.getString(0));
+        }
+        return null;
+    }
+
+    // when get some item
+    public void add_item (String str) {
+        String old_str;
+        old_str = load_item();
+        ContentValues cv = new ContentValues();
+        cv.put("ITEM",  str + "," + old_str);
+        this.getWritableDatabase().update("PLAYER", cv, "ID = 0" , null);
     }
 
 }

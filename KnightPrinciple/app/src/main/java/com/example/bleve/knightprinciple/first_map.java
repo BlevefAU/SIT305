@@ -1,6 +1,7 @@
 package com.example.bleve.knightprinciple;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.graphics.Color;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -18,11 +19,16 @@ public class first_map extends AppCompatActivity {
     final Handler myHandler = new Handler();
     int i=0;
     String [] text_data = {
-            "Hey lad, you finally wake up. I picked up you just near the river, what happen to you? (Red color means NPC's words, White color means your words)",
+            "Old man:\nHey young lad, you finally wake up. I picked up you just near the river, what happen to you?",
             "I...I can't remember anything about myself, not even my name...I think I lose my memorize.",
-            "Well, I am sorry to hear that. Maybe you should go to the Civi(A city name) to see if you can find anything that can help you get your memorize. Here, take it and show to a friend of mine called Cirl in Civi, she can help you.",
+            "Old man:\nWell, I am sorry to hear that. Maybe you should go to the Civi(A city name) to see if you can find anything that can help you get your memorize. Here, take it and show to a friend of mine called Cirl in Civi, she can help you.",
             "Thank you, I won't forget that. (You received the Ruby Necklace)"
     };
+    String [] text_data2 ={
+            "The old man said I was find in this river. But why am I here?",
+            "...Wait, there is something in the river! (You received the mystery ring)"
+    };
+    DatabaseConnect connectionClass;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,14 +36,20 @@ public class first_map extends AppCompatActivity {
 
         // claim the component
         final Button btn_npc = (Button) findViewById(R.id.npc_one);
+        final Button btn_item = (Button) findViewById(R.id.map_item);
         final TextView text_show = (TextView)findViewById(R.id.text);
 
-
+        //database
+        connectionClass = new DatabaseConnect(this,"",null,1);
 
         btn_npc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Cursor res = connectionClass.load_process();
+                res.moveToFirst();
+                if (Integer.parseInt(String.valueOf(res.getString(0))) == 0) {
+                    connectionClass.update_process("1");
+                }
                 // Timer
                 TimerTask myTask = new TimerTask() {
                     public void run() {
@@ -63,6 +75,18 @@ public class first_map extends AppCompatActivity {
                 } else {
                     myTimer.cancel(); // stop the timer
                     return;
+                }
+            }
+        });
+
+        btn_item.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Cursor res = connectionClass.load_process();
+                res.moveToFirst();
+                if (Integer.parseInt(String.valueOf(res.getString(0))) == 1) {
+                    connectionClass.update_process("2");
+                    connectionClass.add_item("1");
                 }
             }
         });
