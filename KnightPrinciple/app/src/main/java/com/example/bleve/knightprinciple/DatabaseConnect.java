@@ -67,17 +67,19 @@ public class DatabaseConnect extends SQLiteOpenHelper{
         cv.put("LOVEONE", "0");
         cv.put("LOVETWO", "0");
         cv.put("PROCESS", "0");
-        cv.put("ITEM", "");
+        cv.put("ITEM", "0");
         ContentValues cv2 = new ContentValues();
         cv2.put("MERCY", "0");
         cv2.put("LOVEONE", "0");
         cv2.put("LOVETWO", "0");
         cv2.put("PROCESS", "0");
-        cv.put("ITEM", "");
+        cv2.put("ITEM", "0");
         if (!(cursor.moveToFirst())) {
             this.getWritableDatabase().insertOrThrow("PLAYER", "", cv);
+            Log.d("create","0");
         } else {
-            this.getWritableDatabase().update("PLAYER", cv2, "ID = 0" , null);
+            this.getWritableDatabase().update("PLAYER", cv2, "ID =" + 0 , null);
+            Log.d("Update","1");
         }
     }
 
@@ -119,6 +121,7 @@ public class DatabaseConnect extends SQLiteOpenHelper{
     public void add_item (String str) {
         String old_str;
         old_str = load_item();
+        Log.d("test", old_str);
         ContentValues cv = new ContentValues();
         cv.put("ITEM",  str + "," + old_str);
         this.getWritableDatabase().update("PLAYER", cv, "ID = 0" , null);

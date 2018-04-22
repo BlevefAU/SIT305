@@ -8,23 +8,165 @@
     tools:context="com.example.bleve.knightprinciple.big_map">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/place1"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_marginBottom="39dp"
         android:layout_marginEnd="98dp"
-        app:srcCompat="@drawable/icon_house" />
+        app:srcCompat="@drawable/icon_house7" />
+
+    <ImageView
+        android:id="@+id/place8"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignTop="@+id/place7"
+        android:layout_toEndOf="@+id/place2"
+        app:srcCompat="@drawable/icon_house8" />
+
+    <ImageView
+        android:id="@+id/place7"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignEnd="@+id/place6"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="6dp"
+        android:layout_marginTop="17dp"
+        app:srcCompat="@drawable/icon_house6" />
+
+    <ImageView
+        android:id="@+id/place5"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="44dp"
+        app:srcCompat="@drawable/icon_house"
+        android:layout_alignBottom="@+id/place6"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_marginStart="11dp" />
+
+    <ImageView
+        android:id="@+id/place6"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_above="@+id/place2"
+        android:layout_marginBottom="36dp"
+        android:layout_toEndOf="@+id/textView"
+        app:srcCompat="@drawable/icon_house5" />
+
+    <ImageView
+        android:id="@+id/place4"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_alignTop="@+id/place3"
+        android:layout_marginStart="40dp"
+        app:srcCompat="@drawable/icon_house4" />
+
+    <ImageView
+        android:id="@+id/place2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_above="@+id/textView3"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="36dp"
+        app:srcCompat="@drawable/icon_house2" />
+
+    <ImageView
+        android:id="@+id/place3"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="9dp"
+        app:srcCompat="@drawable/icon_house3" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/place1"
+        android:layout_alignEnd="@+id/place2"
+        android:layout_marginBottom="61dp"
+        android:layout_marginEnd="20dp"
+        android:text="Civi"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView8"
+        android:layout_alignBottom="@+id/textView8"
+        android:layout_alignEnd="@+id/place4"
+        android:text="Ele"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="82dp"
+        android:text="Atlas"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp"
+        android:layout_alignTop="@+id/place7"
+        android:layout_alignEnd="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/place6"
+        android:layout_alignEnd="@+id/place5"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="18dp"
+        android:text="Tusi"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/place2"
+        android:layout_alignStart="@+id/place3"
+        android:text="Deti"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wood"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/place4"
+        android:layout_marginEnd="7dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="18dp"
+        android:text="mystery"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/imageView2"
-        android:layout_marginBottom="10dp"
         android:text="Village"
         android:textColor="@android:color/background_light"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:layout_below="@+id/textView3"
+        android:layout_alignEnd="@+id/place1" />
+
 </RelativeLayout>

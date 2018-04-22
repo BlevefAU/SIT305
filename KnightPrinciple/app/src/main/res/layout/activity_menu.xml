@@ -17,7 +17,7 @@
         android:theme="?attr/actionBarTheme" />
 
     <Button
-        android:id="@+id/house"
+        android:id="@+id/home"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:background="@drawable/home"
@@ -61,7 +61,7 @@
         android:layout_below="@+id/toolbar3"
         android:layout_marginTop="45dp"
         android:background="@android:color/darker_gray"
-        android:gravity="center_vertical" />
+        android:gravity="center_vertical|center_horizontal" />
 
     <TextView
         android:id="@+id/name_quest"
@@ -151,7 +151,7 @@
         app:srcCompat="@drawable/miss"
         android:layout_marginStart="11dp"
         android:layout_alignTop="@+id/i2"
-        android:layout_alignStart="@+id/house" />
+        android:layout_alignStart="@+id/home" />
 
     <ImageView
         android:id="@+id/i2"

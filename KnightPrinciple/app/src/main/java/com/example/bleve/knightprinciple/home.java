@@ -48,6 +48,15 @@ public class home extends AppCompatActivity {
         });
 
 
+        Button btn_menu = (Button) findViewById(R.id.menu);
+        btn_menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(home.this, menu.class));
+            }
+        });
+
+
         // animation of character
         c1.startAnimation(topdownan);
         topdownan.setAnimationListener(new Animation.AnimationListener() {
@@ -96,7 +105,7 @@ public class home extends AppCompatActivity {
                 public void run() {
                     text.setText("My head really hurt...I am in a house? I should go out and see if there is any people.(Leave by click the house icon in the top)");
                 }
-            }, 3000);
+            }, 500);
         } else if(Integer.parseInt(String.valueOf(res.getString(0))) == 1){
 
         }

@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -24,10 +25,6 @@ public class first_map extends AppCompatActivity {
             "Old man:\nWell, I am sorry to hear that. Maybe you should go to the Civi(A city name) to see if you can find anything that can help you get your memorize. Here, take it and show to a friend of mine called Cirl in Civi, she can help you.",
             "Thank you, I won't forget that. (You received the Ruby Necklace)"
     };
-    String [] text_data2 ={
-            "The old man said I was find in this river. But why am I here?",
-            "...Wait, there is something in the river! (You received the mystery ring)"
-    };
     DatabaseConnect connectionClass;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +39,23 @@ public class first_map extends AppCompatActivity {
         //database
         connectionClass = new DatabaseConnect(this,"",null,1);
 
+        Button btn_menu = (Button) findViewById(R.id.menu);
+        btn_menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(first_map.this, menu.class));
+            }
+        });
+
+
+        Button btn_map = (Button) findViewById(R.id.map);
+        btn_map.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(first_map.this, big_map.class));
+            }
+        });
+
         btn_npc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -49,14 +63,16 @@ public class first_map extends AppCompatActivity {
                 res.moveToFirst();
                 if (Integer.parseInt(String.valueOf(res.getString(0))) == 0) {
                     connectionClass.update_process("1");
+
+                    // Timer
+                    TimerTask myTask = new TimerTask() {
+                        public void run() {
+                            update_text(); // text update method
+                        }
+                    };
+                    myTimer.schedule(myTask,0,3000); // TimerTask, delay, period
                 }
-                // Timer
-                TimerTask myTask = new TimerTask() {
-                    public void run() {
-                        update_text(); // text update method
-                    }
-                };
-                myTimer.schedule(myTask,0,5000); // TimerTask, delay, period
+
             }
             // Runnable method
             final Runnable myRunnable = new Runnable() {
@@ -87,6 +103,13 @@ public class first_map extends AppCompatActivity {
                 if (Integer.parseInt(String.valueOf(res.getString(0))) == 1) {
                     connectionClass.update_process("2");
                     connectionClass.add_item("1");
+                    final Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            text_show.setText("The old man said I was find in this river. But why am I here? ...Wait, there is something in the river! (You received the mystery ring)");
+                        }
+                    }, 500);
                 }
             }
         });
