@@ -56,6 +56,13 @@ public class home extends AppCompatActivity {
             }
         });
 
+        Button btn_map = (Button) findViewById(R.id.map);
+        btn_menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(home.this, big_map.class));
+            }
+        });
 
         // animation of character
         c1.startAnimation(topdownan);

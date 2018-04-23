@@ -7,166 +7,178 @@
     android:background="@drawable/big_map"
     tools:context="com.example.bleve.knightprinciple.big_map">
 
-    <ImageView
-        android:id="@+id/place1"
+    <Button
+        android:id="@+id/p1"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_alignParentBottom="true"
+        android:layout_above="@+id/pt1"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@+id/pt9"
+        android:background="@drawable/icon_house7" />
+
+    <Button
+        android:id="@+id/p2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_alignParentEnd="true"
-        android:layout_marginBottom="39dp"
-        android:layout_marginEnd="98dp"
-        app:srcCompat="@drawable/icon_house7" />
-
-    <ImageView
-        android:id="@+id/place8"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_alignTop="@+id/place7"
-        android:layout_toEndOf="@+id/place2"
-        app:srcCompat="@drawable/icon_house8" />
-
-    <ImageView
-        android:id="@+id/place7"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_alignEnd="@+id/place6"
-        android:layout_alignParentTop="true"
+        android:layout_alignTop="@+id/p1"
         android:layout_marginEnd="6dp"
-        android:layout_marginTop="17dp"
-        app:srcCompat="@drawable/icon_house6" />
+        android:layout_marginTop="9dp"
+        android:background="@drawable/icon_house3"
+        android:visibility="invisible" />
 
-    <ImageView
-        android:id="@+id/place5"
+    <Button
+        android:id="@+id/p3"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginBottom="44dp"
-        app:srcCompat="@drawable/icon_house"
-        android:layout_alignBottom="@+id/place6"
-        android:layout_alignStart="@+id/textView3"
-        android:layout_marginStart="11dp" />
-
-    <ImageView
-        android:id="@+id/place6"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_above="@+id/place2"
-        android:layout_marginBottom="36dp"
-        android:layout_toEndOf="@+id/textView"
-        app:srcCompat="@drawable/icon_house5" />
-
-    <ImageView
-        android:id="@+id/place4"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_alignStart="@+id/textView3"
-        android:layout_alignTop="@+id/place3"
-        android:layout_marginStart="40dp"
-        app:srcCompat="@drawable/icon_house4" />
-
-    <ImageView
-        android:id="@+id/place2"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_above="@+id/textView3"
+        android:layout_above="@+id/p1"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="36dp"
-        app:srcCompat="@drawable/icon_house2" />
+        android:layout_marginBottom="51dp"
+        android:layout_marginStart="52dp"
+        android:background="@drawable/icon_house2"
+        android:visibility="invisible" />
 
-    <ImageView
-        android:id="@+id/place3"
+    <Button
+        android:id="@+id/p5"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_alignBottom="@+id/textView"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="9dp"
-        app:srcCompat="@drawable/icon_house3" />
+        android:layout_above="@+id/pt2"
+        android:layout_alignStart="@+id/p3"
+        android:layout_marginStart="18dp"
+        android:background="@drawable/icon_house4"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/p6"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_above="@+id/p3"
+        android:layout_marginBottom="11dp"
+        android:layout_marginStart="6dp"
+        android:layout_toEndOf="@+id/pt1"
+        android:background="@drawable/icon_house"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/p7"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/p5"
+        android:layout_marginTop="49dp"
+        android:background="@drawable/icon_house8"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/p8"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignBaseline="@+id/p7"
+        android:layout_alignBottom="@+id/p7"
+        android:layout_alignStart="@+id/pt2"
+        android:background="@drawable/icon_house6"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/p9"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_above="@+id/p6"
+        android:layout_toEndOf="@+id/p3"
+        android:background="@drawable/icon_house5"
+        android:visibility="invisible" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/pt1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/place1"
-        android:layout_alignEnd="@+id/place2"
-        android:layout_marginBottom="61dp"
-        android:layout_marginEnd="20dp"
-        android:text="Civi"
+        android:layout_alignEnd="@+id/p1"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:text="Village"
         android:textColor="@android:color/background_light"
         android:textSize="24sp" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/pt7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView8"
-        android:layout_alignBottom="@+id/textView8"
-        android:layout_alignEnd="@+id/place4"
+        android:layout_alignEnd="@+id/pt3"
+        android:layout_alignTop="@+id/p7"
+        android:layout_marginTop="83dp"
         android:text="Ele"
         android:textColor="@android:color/background_light"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:visibility="invisible" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/pt9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="82dp"
+        android:layout_alignEnd="@+id/p9"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="8dp"
+        android:text="Livier"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/pt8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/p7"
+        android:layout_alignStart="@+id/pt6"
         android:text="Atlas"
         android:textColor="@android:color/background_light"
         android:textSize="24sp"
-        android:layout_alignTop="@+id/place7"
-        android:layout_alignEnd="@+id/textView6" />
+        android:visibility="invisible" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/pt3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/place6"
-        android:layout_alignEnd="@+id/place5"
-        android:layout_marginBottom="15dp"
-        android:layout_marginEnd="18dp"
-        android:text="Tusi"
-        android:textColor="@android:color/background_light"
-        android:textSize="24sp" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/place2"
-        android:layout_alignStart="@+id/place3"
-        android:text="Deti"
-        android:textColor="@android:color/background_light"
-        android:textSize="24sp" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Wood"
+        android:layout_above="@+id/p1"
+        android:layout_alignStart="@+id/p5"
+        android:layout_marginBottom="29dp"
+        android:layout_marginStart="7dp"
+        android:text="Civi"
         android:textColor="@android:color/background_light"
         android:textSize="24sp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignEnd="@+id/place4"
-        android:layout_marginEnd="7dp" />
+        android:visibility="invisible" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/pt6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="18dp"
+        android:layout_alignStart="@+id/p2"
+        android:layout_below="@+id/p6"
+        android:text="Dive"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/pt5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/p5"
+        android:layout_below="@+id/p5"
+        android:layout_marginEnd="6dp"
+        android:text="wood"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/pt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/p2"
+        android:layout_below="@+id/p2"
         android:text="mystery"
         android:textColor="@android:color/background_light"
-        android:textSize="24sp" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Village"
-        android:textColor="@android:color/background_light"
         android:textSize="24sp"
-        android:layout_below="@+id/textView3"
-        android:layout_alignEnd="@+id/place1" />
+        android:visibility="invisible" />
 
 </RelativeLayout>

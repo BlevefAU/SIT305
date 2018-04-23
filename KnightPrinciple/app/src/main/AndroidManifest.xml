@@ -20,7 +20,8 @@
         <activity android:name=".bg_story" />
         <activity android:name=".big_map" />
         <activity android:name=".first_map" />
-        <activity android:name=".menu"></activity>
+        <activity android:name=".menu" />
+        <activity android:name=".civi"></activity>
     </application>
 
 </manifest>

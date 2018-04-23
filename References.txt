@@ -8,6 +8,9 @@ https://www.flaticon.com/most-downloaded/7
 bg_1.png
 http://www.aigei.com/view/70647.html
 
+bg_2.jpg
+http://www.aigei.com/view/70647.html?order=last&page=3
+
 
 c1.png
 http://www.aigei.com/view/73818.html
@@ -24,3 +27,21 @@ http://www.aigei.com/view/3650-5997506.html?order=name&page=3
 
 miss.png
 http://www.aigei.com/s?q=%E9%97%AE%E5%8F%B7&type=2d
+
+icon_house.png
+http://www.aigei.com/view/73228-34149388.html?order=name&page=5
+
+icon_house2.png
+http://www.aigei.com/view/73228-34149388.html?order=name&page=
+
+icon_house3.png
+http://www.aigei.com/view/73228-34149388.html?order=name&page=11
+
+icon_house4.png
+http://www.aigei.com/view/73228-34149487.html
+
+icon_house5.png
+http://www.aigei.com/view/73228-34149486.html
+
+icon_house6.png
+http://www.aigei.com/view/73228-34149491.html

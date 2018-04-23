@@ -56,6 +56,14 @@ public class first_map extends AppCompatActivity {
             }
         });
 
+        Button btn_house = (Button) findViewById(R.id.home);
+        btn_house.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(first_map.this, home.class));
+            }
+        });
+
         btn_npc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
