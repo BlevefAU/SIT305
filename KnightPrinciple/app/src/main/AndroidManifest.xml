@@ -21,7 +21,8 @@
         <activity android:name=".big_map" />
         <activity android:name=".first_map" />
         <activity android:name=".menu" />
-        <activity android:name=".civi"></activity>
+        <activity android:name=".civi" />
+        <activity android:name=".civi_water"></activity>
     </application>
 
 </manifest>

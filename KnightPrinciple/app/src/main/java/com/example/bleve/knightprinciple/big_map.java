@@ -1,5 +1,6 @@
 package com.example.bleve.knightprinciple;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -41,10 +42,22 @@ public class big_map extends AppCompatActivity {
         res.moveToFirst();
         if (Integer.parseInt(String.valueOf(res.getString(0))) >= 1) {
 
-            btn_m2.setVisibility(View.VISIBLE);
-            tx2.setVisibility(View.VISIBLE);
+            btn_m3.setVisibility(View.VISIBLE);
+            tx3.setVisibility(View.VISIBLE);
         }
 
+        btn_m1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(big_map.this, first_map.class));
+            }
+        });
+        btn_m3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(big_map.this, civi.class));
+            }
+        });
 
     }
 }

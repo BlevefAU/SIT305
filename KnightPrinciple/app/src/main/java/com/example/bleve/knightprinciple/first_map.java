@@ -22,7 +22,8 @@ public class first_map extends AppCompatActivity {
     String [] text_data = {
             "Old man:\nHey young lad, you finally wake up. I picked up you just near the river, what happen to you?",
             "I...I can't remember anything about myself, not even my name...I think I lose my memorize.",
-            "Old man:\nWell, I am sorry to hear that. Maybe you should go to the Civi(A city name) to see if you can find anything that can help you get your memorize. Here, take it and show to a friend of mine called Cirl in Civi, she can help you.",
+            "Old man:\nWell, I am sorry to hear that. Maybe you should go to the Civi to see if you can find anything that can help",
+            "Old man:\n Here, take it and show to a friend of mine called Tedy in Civi, she can help you.",
             "Thank you, I won't forget that. (You received the Ruby Necklace)"
     };
     DatabaseConnect connectionClass;
