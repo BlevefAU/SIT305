@@ -22,7 +22,9 @@
         <activity android:name=".first_map" />
         <activity android:name=".menu" />
         <activity android:name=".civi" />
-        <activity android:name=".civi_water"></activity>
+        <activity android:name=".civi_water" />
+        <activity android:name=".civi_right" />
+        <activity android:name=".civi_dice"></activity>
     </application>
 
 </manifest>

@@ -12,15 +12,28 @@ bg_2.jpg
 http://www.aigei.com/view/70647.html?order=last&page=3
 
 
+bg4.png
+http://www.aigei.com/view/70647.html?order=last&page=3
+
+
 c1.png
 http://www.aigei.com/view/73818.html
 
 c2.png
 http://www.aigei.com/view/73818.html?order=name&page=7
 
+c3.png
+http://www.aigei.com/view/73818.html?order=name&page=5
+
+c4.png
+http://www.aigei.com/view/73818.html?order=name&page=9
+
 
 map_item.png
 http://www.aigei.com/view/3650.html
+
+map_item2.png
+http://www.aigei.com/view/3650.html?order=name&page=3
 
 quest_item.png
 http://www.aigei.com/view/3650-5997506.html?order=name&page=3
@@ -45,3 +58,6 @@ http://www.aigei.com/view/73228-34149486.html
 
 icon_house6.png
 http://www.aigei.com/view/73228-34149491.html
+
+right.png
+http://www.aigei.com/view/73378.html?order=name&page=2
