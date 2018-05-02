@@ -24,9 +24,11 @@ public class menu extends AppCompatActivity {
         connectionClass = new DatabaseConnect(this,"",null,1);
 
         String process = "You wake up in a unknow place. You do not have any memorize, not even your name. You decided to go out and look what happened.";
+        String process2 = "You meet Tedy in civi, you should keep follow her. ";
 
         final TextView quest = (TextView) findViewById(R.id.quest);
         final ImageView i1 = (ImageView)findViewById(R.id.i1);
+        final ImageView i2 = (ImageView)findViewById(R.id.i2);
 
         Cursor res = connectionClass.load_process();
         res.moveToFirst();
@@ -36,13 +38,17 @@ public class menu extends AppCompatActivity {
         if (Integer.parseInt(String.valueOf(res.getString(0))) == 0 || Integer.parseInt(String.valueOf(res.getString(0))) == 1 || Integer.parseInt(String.valueOf(res.getString(0))) == 2) {
             quest.setText(process);
         }
+        if (Integer.parseInt(String.valueOf(res.getString(0))) == 3 || Integer.parseInt(String.valueOf(res.getString(0))) == 4 || Integer.parseInt(String.valueOf(res.getString(0))) == 5 || Integer.parseInt(String.valueOf(res.getString(0))) == 6) {
+            quest.setText(process2);
+        }
 
         if(res2.contains("1")== true){
             i1.setImageResource(R.drawable.map_item);
-            Log.d("test",res2);
         }
 
-
+        if(res2.contains("2")== true){
+            i2.setImageResource(R.drawable.map_item2);
+        }
         Button btn_house = (Button) findViewById(R.id.home);
         btn_house.setOnClickListener(new View.OnClickListener() {
             @Override

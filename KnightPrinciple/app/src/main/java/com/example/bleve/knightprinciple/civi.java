@@ -106,7 +106,7 @@ public class civi extends AppCompatActivity {
         btn_right.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(civi.this, big_map.class));
+                startActivity(new Intent(civi.this, civi_right.class));
             }
         });
 

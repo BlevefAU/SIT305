@@ -17,13 +17,13 @@ public class civi_right extends AppCompatActivity {
     final Timer myTimer = new Timer();
     final Handler myHandler = new Handler();
     String [] text_data = {
-            "Hey there, do you want to play a dice game?",
+            "Poli:\nHey there, do you want to play a dice game?",
             "Dice game, that sound interesting.",
-            "If you can continually win me three times...",
+            "Poli:\nIf you can win me.",
             "I can get reward?",
-            "Yeah, you are clever. The reward is this pocket watches.",
+            "Poli:\nYeah, you are clever. The reward is this pocket watches.",
             "That looks good...",
-            "So, you want to play?"
+            "Poli:\nSo, you want to play?"
     };
     int i =0;
 
@@ -37,6 +37,7 @@ public class civi_right extends AppCompatActivity {
         final TextView text_show = (TextView)findViewById(R.id.text);
         final Button btn_play =  (Button) findViewById(R.id.play);
         final Button btn_noplay =  (Button) findViewById(R.id.notplay);
+        final Button btn_left = (Button) findViewById(R.id.left);
 
         final Button btn_npc = (Button) findViewById(R.id.npc);
         btn_npc.setOnClickListener(new View.OnClickListener() {
@@ -53,8 +54,9 @@ public class civi_right extends AppCompatActivity {
                         }
                     };
                     myTimer.schedule(myTask,0,3000); // TimerTask, delay, period
-                    btn_play.setVisibility(View.VISIBLE);
-                    btn_noplay.setVisibility(View.VISIBLE);
+
+                } else if (Integer.parseInt(String.valueOf(res.getString(0))) == 7 ) {
+                    text_show.setText("Poli:\nIf you do not want to play then just go away.");
                 }
 
             }
@@ -62,6 +64,10 @@ public class civi_right extends AppCompatActivity {
             final Runnable myRunnable = new Runnable() {
                 public void run() {
                     text_show.setText(text_data[i -1]); // update text
+                    if (i == text_data.length) {
+                        btn_play.setVisibility(View.VISIBLE);
+                        btn_noplay.setVisibility(View.VISIBLE);
+                    }
                 }
             };
 
@@ -92,6 +98,13 @@ public class civi_right extends AppCompatActivity {
             public void onClick(View view) {
                 btn_play.setVisibility(View.INVISIBLE);
                 btn_noplay.setVisibility(View.INVISIBLE);
+            }
+        });
+
+        btn_left.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(civi_right.this, civi.class));
             }
         });
     }
