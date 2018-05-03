@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_2"
+    tools:context=".civi_right">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/text_bg"
+        android:gravity="center"
+
+        android:padding="20dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light" />
+
+    <Button
+        android:id="@+id/npc"
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        android:layout_above="@+id/text"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="91dp"
+        android:background="@drawable/c4" />
+
+    <Button
+        android:id="@+id/left"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/left" />
+
+    <Button
+        android:id="@+id/play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/npc"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="91dp"
+        android:text="Yeah, we can play now"
+        android:textSize="18sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/notplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/play"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="I do not have time"
+        android:textSize="18sp"
+        android:visibility="invisible" />
+
+</RelativeLayout>

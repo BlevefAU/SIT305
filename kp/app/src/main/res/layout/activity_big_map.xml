@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/big_map"
+    tools:context=".big_map">
+
+    <Button
+        android:id="@+id/p1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_above="@+id/pt1"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@+id/pt9"
+        android:background="@drawable/icon_house7" />
+
+    <Button
+        android:id="@+id/p2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/p1"
+        android:layout_marginEnd="6dp"
+        android:layout_marginTop="9dp"
+        android:background="@drawable/icon_house3"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/p3"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_above="@+id/p1"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="51dp"
+        android:layout_marginStart="52dp"
+        android:background="@drawable/icon_house2"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/p5"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_above="@+id/pt2"
+        android:layout_alignStart="@+id/p3"
+        android:layout_marginStart="18dp"
+        android:background="@drawable/icon_house4"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/p6"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_above="@+id/p3"
+        android:layout_marginBottom="11dp"
+        android:layout_marginStart="6dp"
+        android:layout_toEndOf="@+id/pt1"
+        android:background="@drawable/icon_house"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/p7"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/p5"
+        android:layout_marginTop="49dp"
+        android:background="@drawable/icon_house8"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/p8"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignBaseline="@+id/p7"
+        android:layout_alignBottom="@+id/p7"
+        android:layout_alignStart="@+id/pt2"
+        android:background="@drawable/icon_house6"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/p9"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_above="@+id/p6"
+        android:layout_toEndOf="@+id/p3"
+        android:background="@drawable/icon_house5"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/pt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/p1"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:text="Village"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/pt7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/pt3"
+        android:layout_alignTop="@+id/p7"
+        android:layout_marginTop="83dp"
+        android:text="Ele"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/pt9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/p9"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="8dp"
+        android:text="Livier"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/pt8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/p7"
+        android:layout_alignStart="@+id/pt6"
+        android:text="Atlas"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/pt3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/p1"
+        android:layout_alignStart="@+id/p5"
+        android:layout_marginBottom="29dp"
+        android:layout_marginStart="7dp"
+        android:text="Civi"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/pt6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/p2"
+        android:layout_below="@+id/p6"
+        android:text="Dive"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/pt5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/p5"
+        android:layout_below="@+id/p5"
+        android:layout_marginEnd="6dp"
+        android:text="wood"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/pt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/p2"
+        android:layout_below="@+id/p2"
+        android:text="mystery"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp"
+        android:visibility="invisible" />
+
+
+</RelativeLayout>
