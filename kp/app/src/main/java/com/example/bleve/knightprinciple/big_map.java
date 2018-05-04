@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -37,6 +38,7 @@ public class big_map extends AppCompatActivity {
 
         connectionClass = new DatabaseConnect(this,"",null,1);
 
+        String res2 = connectionClass.load_item();
 
         Cursor res = connectionClass.load_process();
         res.moveToFirst();
@@ -51,11 +53,20 @@ public class big_map extends AppCompatActivity {
             btn_m5.setVisibility(View.VISIBLE);
             tx5.setVisibility(View.VISIBLE);
         }
-
+        if(res2.contains("3")== true){
+            btn_m2.setVisibility(View.VISIBLE);
+            tx2.setVisibility(View.VISIBLE);
+        }
         btn_m1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(big_map.this, first_map.class));
+            }
+        });
+        btn_m2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(big_map.this, mystery.class));
             }
         });
         btn_m3.setOnClickListener(new View.OnClickListener() {

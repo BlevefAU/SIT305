@@ -26,6 +26,13 @@ public class menu extends AppCompatActivity {
 
         final TextView quest = (TextView) findViewById(R.id.quest);
         final ImageView i1 = (ImageView)findViewById(R.id.i1);
+        final ImageView i2 = (ImageView)findViewById(R.id.i2);
+        final ImageView i3 = (ImageView)findViewById(R.id.i3);
+        final ImageView i4 = (ImageView)findViewById(R.id.i4);
+        final ImageView i5 = (ImageView)findViewById(R.id.i5);
+        final ImageView i6 = (ImageView)findViewById(R.id.i6);
+        final ImageView i7 = (ImageView)findViewById(R.id.i7);
+        final ImageView i8 = (ImageView)findViewById(R.id.i8);
 
         Cursor res = connectionClass.load_process();
         res.moveToFirst();
@@ -40,7 +47,18 @@ public class menu extends AppCompatActivity {
             i1.setImageResource(R.drawable.map_item);
             Log.d("test",res2);
         }
-
+        if(res2.contains("2")== true){
+            i2.setImageResource(R.drawable.map_item2);
+            Log.d("test",res2);
+        }
+        if(res2.contains("3")== true){
+            i3.setImageResource(R.drawable.map_item3);
+            Log.d("test",res2);
+        }
+        if(res2.contains("4")== true){
+            i3.setImageResource(R.drawable.map_item4);
+            Log.d("test",res2);
+        }
 
         Button btn_house = (Button) findViewById(R.id.home);
         btn_house.setOnClickListener(new View.OnClickListener() {
@@ -55,6 +73,14 @@ public class menu extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(menu.this, big_map.class));
+            }
+        });
+
+        Button btn_exit = (Button) findViewById(R.id.exit);
+        btn_exit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(menu.this, MainActivity.class));
             }
         });
     }

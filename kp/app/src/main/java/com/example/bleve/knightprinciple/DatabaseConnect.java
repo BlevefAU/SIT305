@@ -72,7 +72,7 @@ public class DatabaseConnect extends SQLiteOpenHelper {
 
     public int load() {
         Cursor cursor = this.getReadableDatabase().rawQuery("SELECT * FROM PLAYER WHERE (ID = 0)", null);
-        if (!(cursor.moveToFirst())) {
+        if (cursor.moveToFirst()) {
             return 0;
         } else {
             return 1;

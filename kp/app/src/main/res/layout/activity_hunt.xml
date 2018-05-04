@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg7"
+    tools:context=".hunt">
+
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/black"
+        android:gravity="center" />
+
+    <Button
+        android:id="@+id/tiger"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="115dp"
+        android:layout_marginStart="46dp"
+        android:background="@drawable/tiger"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/tiger2"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/tiger"
+        android:background="@drawable/tiger"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/tiger3"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="186dp"
+        android:layout_marginStart="124dp"
+        android:background="@drawable/tiger"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/tiger4"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/eagle"
+        android:layout_marginBottom="21dp"
+        android:background="@drawable/tiger"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/eagle"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/score"
+        android:layout_toEndOf="@+id/snake4"
+        android:background="@drawable/eagle"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/eagle2"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="69dp"
+        android:layout_toEndOf="@+id/tiger3"
+        android:background="@drawable/eagle"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/eagle4"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="138dp"
+        android:layout_toStartOf="@+id/snake"
+        android:background="@drawable/eagle"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/eagle3"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_alignTop="@+id/eagle4"
+        android:layout_marginEnd="-124dp"
+        android:layout_toStartOf="@+id/tiger3"
+        android:background="@drawable/eagle"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/snake"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/snake"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/snake4"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="202dp"
+        android:background="@drawable/snake"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/snake3"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/tiger4"
+        android:background="@drawable/snake"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/snake2"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_above="@+id/tiger4"
+        android:layout_toStartOf="@+id/snake"
+        android:background="@drawable/snake"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/snake"
+        android:text="start" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/tiger4"
+        android:text="Back" />
+
+    <TextView
+        android:id="@+id/show"
+        android:layout_width="346dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/eagle4"
+        android:layout_marginStart="-108dp"
+        android:layout_toEndOf="@+id/tiger"
+        android:text="You reach the request"
+        android:textColor="@color/colorAccent"
+        android:textSize="30sp"
+        android:visibility="invisible" />
+
+</RelativeLayout>

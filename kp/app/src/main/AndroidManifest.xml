@@ -25,7 +25,9 @@
         <activity android:name=".civi_water" />
         <activity android:name=".first_map" />
         <activity android:name=".home" />
-        <activity android:name=".wood"></activity>
+        <activity android:name=".wood" />
+        <activity android:name=".hunt" />
+        <activity android:name=".mystery"></activity>
     </application>
 
 </manifest>
