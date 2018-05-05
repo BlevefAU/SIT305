@@ -27,7 +27,11 @@
         <activity android:name=".home" />
         <activity android:name=".wood" />
         <activity android:name=".hunt" />
-        <activity android:name=".mystery"></activity>
+        <activity android:name=".mystery" />
+        <activity android:name=".Dive" />
+        <activity android:name=".dive_left" />
+        <activity android:name=".dive_right_two" />
+        <activity android:name=".dive_right_final"></activity>
     </application>
 
 </manifest>

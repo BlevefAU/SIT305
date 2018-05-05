@@ -32,7 +32,7 @@
         android:background="@drawable/c4" />
 
     <Button
-        android:id="@+id/left"
+        android:id="@+id/right"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_alignParentStart="true"

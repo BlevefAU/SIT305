@@ -53,6 +53,12 @@ public class big_map extends AppCompatActivity {
             btn_m5.setVisibility(View.VISIBLE);
             tx5.setVisibility(View.VISIBLE);
         }
+
+        if (Integer.parseInt(String.valueOf(res.getString(0))) >= 10) {
+
+            btn_m6.setVisibility(View.VISIBLE);
+            tx6.setVisibility(View.VISIBLE);
+        }
         if(res2.contains("3")== true){
             btn_m2.setVisibility(View.VISIBLE);
             tx2.setVisibility(View.VISIBLE);
@@ -79,6 +85,13 @@ public class big_map extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(big_map.this, wood.class));
+            }
+        });
+
+        btn_m6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(big_map.this, Dive.class));
             }
         });
     }

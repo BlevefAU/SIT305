@@ -11,6 +11,30 @@ http://www.aigei.com/view/70647.html
 bg_2.jpg
 http://www.aigei.com/view/70647.html?order=last&page=3
 
+bg_5.jpg
+http://www.aigei.com/view/70647.html?order=last&page=3
+
+bg_7.jpg
+http://www.aigei.com/view/70647.html?order=last&page=1
+
+bg_8.jpg
+http://www.aigei.com/view/70647.html?order=last&page=10
+
+
+bg_9.jpg
+http://www.aigei.com/view/70647.html?order=last&page=10
+
+
+bg_10.jpg
+http://www.aigei.com/view/70647.html?order=last&page=10
+
+
+bg_11.jpg
+http://www.aigei.com/view/70647.html?order=last&page=12
+
+
+bg_12.jpg
+http://www.aigei.com/view/70647.html?order=last&page=13
 
 c1.png
 http://www.aigei.com/view/73818.html
@@ -20,6 +44,9 @@ http://www.aigei.com/view/73818.html?order=name&page=7
 
 
 map_item.png
+http://www.aigei.com/view/3650.html
+
+map_item2.png
 http://www.aigei.com/view/3650.html
 
 quest_item.png
@@ -45,3 +72,9 @@ http://www.aigei.com/view/73228-34149486.html
 
 icon_house6.png
 http://www.aigei.com/view/73228-34149491.html
+
+tiger.jpg
+http://image.baidu.com/search/redirect?tn=redirect&word=j&juid=D28C86&sign=ckekicbcek&url=http%3A%2F%2Fwww.dogame.com.cn%2Fbbs%2Fviewthread.php%3Ftid%3D44693&objurl=http%3A%2F%2Fwww.dogame.com.cn%2Fbbs%2Fattachments%2F10110215313b73cdd08a4120c4.jpg
+
+snake.jpg
+http://www.16sucai.com/2016/12/104634.html

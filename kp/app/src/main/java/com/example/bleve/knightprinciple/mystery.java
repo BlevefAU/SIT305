@@ -1,5 +1,6 @@
 package com.example.bleve.knightprinciple;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -23,17 +24,23 @@ public class mystery extends AppCompatActivity {
             "You know who I am?",
             "???:\nYou won't want to know.",
             "But...wait!",
-            "The man is so strange. He just disappear from water."
+            "???:\n Go to Dive meet the king.We will meet after.",
+            "Strange man... (He just disappear from water.)"
     };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mystery);
+
         final TextView text_show = (TextView)findViewById(R.id.text);
         connectionClass = new DatabaseConnect(this,"",null,1);
 
         final Button btn_npc = (Button) findViewById(R.id.npc);
+        final Button btn_map = (Button) findViewById(R.id.map);
+        final Button btn_menu = (Button) findViewById(R.id.menu);
+        final Button btn_home = (Button) findViewById(R.id.home);
+
 
         btn_npc.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,9 +92,32 @@ public class mystery extends AppCompatActivity {
         btn_map_item.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 connectionClass.add_item("4");
+                text_show.setText("Ah...I find something.");
             }
         });
 
+
+        btn_map.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(mystery.this, big_map.class));
+            }
+        });
+
+        btn_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(mystery.this, home.class));
+            }
+        });
+
+        btn_menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(mystery.this, menu.class));
+            }
+        });
     }
 }
