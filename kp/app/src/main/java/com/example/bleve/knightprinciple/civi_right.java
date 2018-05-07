@@ -37,7 +37,7 @@ public class civi_right extends AppCompatActivity {
         final TextView text_show = (TextView)findViewById(R.id.text);
         final Button btn_play =  (Button) findViewById(R.id.play);
         final Button btn_noplay =  (Button) findViewById(R.id.notplay);
-        final Button btn_left = (Button) findViewById(R.id.right);
+        final Button btn_left = (Button) findViewById(R.id.left);
 
         final Button btn_npc = (Button) findViewById(R.id.npc);
         btn_npc.setOnClickListener(new View.OnClickListener() {

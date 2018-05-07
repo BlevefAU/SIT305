@@ -31,7 +31,8 @@
         <activity android:name=".Dive" />
         <activity android:name=".dive_left" />
         <activity android:name=".dive_right_two" />
-        <activity android:name=".dive_right_final"></activity>
+        <activity android:name=".dive_right_final" />
+        <activity android:name=".dive_tree"></activity>
     </application>
 
 </manifest>

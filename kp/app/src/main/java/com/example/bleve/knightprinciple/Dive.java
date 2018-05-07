@@ -54,15 +54,13 @@ public class Dive extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dive);
 
-
-
         connectionClass = new DatabaseConnect(this,"",null,1);
 
         final TextView text_show = (TextView)findViewById(R.id.text);
         final Button btn_npc_one =  (Button) findViewById(R.id.npc_one);
         final Button btn_npc_two =  (Button) findViewById(R.id.npc_two);
-        final Button btn_left = (Button) findViewById(R.id.right);
-        final Button btn_right = (Button) findViewById(R.id.right);
+        final Button btn_left = (Button) findViewById(R.id.left);
+        final Button btn_right = (Button) findViewById(R.id.left);
         final Button btn_map = (Button) findViewById(R.id.map);
         final Button btn_menu = (Button) findViewById(R.id.menu);
         final Button btn_home = (Button) findViewById(R.id.home);

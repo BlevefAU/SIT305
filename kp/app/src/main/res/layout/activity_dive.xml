@@ -82,9 +82,8 @@
         android:id="@+id/right"
         android:layout_width="80dp"
         android:layout_height="50dp"
-        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/map"
         android:layout_alignTop="@+id/left"
-        android:layout_marginEnd="27dp"
         android:background="@drawable/riht" />
 
     <Button
