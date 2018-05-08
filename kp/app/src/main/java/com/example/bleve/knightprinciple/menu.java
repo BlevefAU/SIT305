@@ -56,7 +56,11 @@ public class menu extends AppCompatActivity {
             Log.d("test",res2);
         }
         if(res2.contains("4")== true){
-            i3.setImageResource(R.drawable.map_item4);
+            i4.setImageResource(R.drawable.map_item4);
+            Log.d("test",res2);
+        }
+        if(res2.contains("5")== true){
+            i5.setImageResource(R.drawable.map_item4);
             Log.d("test",res2);
         }
 

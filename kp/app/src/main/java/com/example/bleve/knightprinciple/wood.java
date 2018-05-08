@@ -46,7 +46,7 @@ public class wood extends AppCompatActivity {
             public void onClick(View view) {
                 Cursor res = connectionClass.load_process();
                 res.moveToFirst();
-                if (Integer.parseInt(String.valueOf(res.getString(0))) == 6 || Integer.parseInt(String.valueOf(res.getString(0))) == 8) {
+                if (Integer.parseInt(String.valueOf(res.getString(0))) >= 6 || Integer.parseInt(String.valueOf(res.getString(0))) <= 8) {
                     connectionClass.update_process("9");
                     // Timer
                     TimerTask myTask = new TimerTask() {

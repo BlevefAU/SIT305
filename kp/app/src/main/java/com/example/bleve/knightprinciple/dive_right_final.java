@@ -37,7 +37,7 @@ public class dive_right_final extends AppCompatActivity {
             "Really!Thanks so much. I will go now looking for her.",
             "King:\n Good.",
             "(Ah, almost forget I need the ring from king)"
-            
+
     };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,12 +46,29 @@ public class dive_right_final extends AppCompatActivity {
 
         final Button btn_left = (Button) findViewById(R.id.left);
         final Button btn_npc= (Button) findViewById(R.id.npc);
+        final Button btn_one= (Button) findViewById(R.id.select_one);
+        final Button btn_two= (Button) findViewById(R.id.select_two);
+
         final TextView text_show = (TextView)findViewById(R.id.text);
 
         btn_left.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(dive_right_final.this, dive_right_two.class));
+            }
+        });
+
+        btn_one.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                text_show.setText("(You steal the ring)");
+                connectionClass.add_item("5");
+            }
+        });
+        btn_two.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                text_show.setText("(You lose chance to steal the ring)");
             }
         });
         connectionClass = new DatabaseConnect(this,"",null,1);

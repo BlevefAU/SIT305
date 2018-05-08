@@ -118,7 +118,7 @@ public class dive_tree extends AppCompatActivity {
             // update_text method related to a Runnable
             private void update_text() {
 
-                if(i < text_data.length) {
+                if(i < text_data2.length) {
                     i++;
                     // text_data.setText(String.valueOf(i)); = avoid the RunTime error
                     myHandler.post(myRunnable); // relate this to a Runnable

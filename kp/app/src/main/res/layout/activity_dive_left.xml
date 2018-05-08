@@ -32,16 +32,6 @@
         android:background="@drawable/c8" />
 
     <Button
-        android:id="@+id/right"
-        android:layout_width="80dp"
-        android:layout_height="50dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginEnd="21dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/riht" />
-
-    <Button
         android:id="@+id/tree"
         android:layout_width="wrap_content"
         android:layout_height="270dp"
@@ -49,4 +39,14 @@
         android:layout_alignParentEnd="true"
         android:layout_marginBottom="131dp"
         android:background="@android:color/transparent" />
+
+    <Button
+        android:id="@+id/right"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="26dp"
+        android:background="@drawable/riht" />
 </RelativeLayout>

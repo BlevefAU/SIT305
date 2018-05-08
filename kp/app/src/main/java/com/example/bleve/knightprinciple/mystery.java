@@ -47,7 +47,7 @@ public class mystery extends AppCompatActivity {
             public void onClick(View view) {
                 Cursor res = connectionClass.load_process();
                 res.moveToFirst();
-                if (Integer.parseInt(String.valueOf(res.getString(0))) == 9) {
+                if (Integer.parseInt(String.valueOf(res.getString(0))) <= 9) {
                     connectionClass.update_process("10");
                     // Timer
                     TimerTask myTask = new TimerTask() {

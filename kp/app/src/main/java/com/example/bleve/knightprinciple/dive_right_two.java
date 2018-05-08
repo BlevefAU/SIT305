@@ -41,7 +41,7 @@ public class dive_right_two extends AppCompatActivity {
         setContentView(R.layout.activity_dive_right_two);
 
         final Button btn_left = (Button) findViewById(R.id.left);
-        final Button btn_right = (Button) findViewById(R.id.left);
+        final Button btn_right = (Button) findViewById(R.id.right);
         final TextView text_show = (TextView)findViewById(R.id.text);
 
         final Button btn_npc = (Button) findViewById(R.id.npc);
@@ -65,7 +65,7 @@ public class dive_right_two extends AppCompatActivity {
             public void onClick(View view) {
                 Cursor res = connectionClass.load_process();
                 res.moveToFirst();
-                if (Integer.parseInt(String.valueOf(res.getString(0))) == 16) {
+                if (Integer.parseInt(String.valueOf(res.getString(0))) == 16 || Integer.parseInt(String.valueOf(res.getString(0))) == 17) {
                     connectionClass.update_process("17");
                     btn_right.setVisibility(View.VISIBLE);
                     // Timer
@@ -117,7 +117,7 @@ public class dive_right_two extends AppCompatActivity {
             // update_text method related to a Runnable
             private void update_text2() {
 
-                if(i < text_data.length) {
+                if(i < text_data2.length) {
                     i++;
                     // text_data.setText(String.valueOf(i)); = avoid the RunTime error
                     myHandler.post(myRunnable2); // relate this to a Runnable
