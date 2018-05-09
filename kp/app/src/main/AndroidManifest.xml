@@ -34,7 +34,10 @@
         <activity android:name=".dive_right_two" />
         <activity android:name=".dive_right_final" />
         <activity android:name=".dive_tree" />
-        <activity android:name=".livier"></activity>
+        <activity android:name=".livier" />
+        <activity android:name=".livier_fish" />
+        <activity android:name=".atlas" />
+        <activity android:name=".elem"></activity>
     </application>
 
 </manifest>

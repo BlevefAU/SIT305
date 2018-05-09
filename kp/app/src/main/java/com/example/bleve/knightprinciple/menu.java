@@ -60,10 +60,21 @@ public class menu extends AppCompatActivity {
             Log.d("test",res2);
         }
         if(res2.contains("5")== true){
-            i5.setImageResource(R.drawable.map_item4);
+            i5.setImageResource(R.drawable.map_item6);
             Log.d("test",res2);
         }
-
+        if(res2.contains("6")== true){
+            i6.setImageResource(R.drawable.map_item8);
+            Log.d("test",res2);
+        }
+        if(res2.contains("7")== true){
+            i7.setImageResource(R.drawable.map_item5);
+            Log.d("test",res2);
+        }
+        if(res2.contains("8")== true){
+            i7.setImageResource(R.drawable.map_item7);
+            Log.d("test",res2);
+        }
         Button btn_house = (Button) findViewById(R.id.home);
         btn_house.setOnClickListener(new View.OnClickListener() {
             @Override

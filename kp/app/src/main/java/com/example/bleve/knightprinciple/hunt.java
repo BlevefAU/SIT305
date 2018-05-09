@@ -185,7 +185,7 @@ public class hunt extends AppCompatActivity {
                     }
                     if (score_data > 240){
                         text_show.setVisibility(View.VISIBLE);
-                        connectionClass.add_item("3");
+                        connectionClass.add_item("7");
                         int number;
                         number = connectionClass.load_loveone();
                         number ++;

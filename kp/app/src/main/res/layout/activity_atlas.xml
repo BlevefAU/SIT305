@@ -4,11 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg14"
-    tools:context=".livier">
+    android:background="@drawable/bg_17"
+    tools:context=".atlas">
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        app:srcCompat="@android:color/background_dark" />
+
+    <Button
+        android:id="@+id/menu"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/menu" />
+
+    <Button
+        android:id="@+id/home"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/menu"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/home" />
+
+    <Button
+        android:id="@+id/map"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/menu"
+        android:layout_marginEnd="46dp"
+        android:background="@drawable/map" />
 
     <TextView
-        android:id="@+id/text"
+        android:id="@+id/text3"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_alignParentBottom="true"
@@ -22,55 +57,10 @@
         android:textColor="@android:color/background_light" />
 
     <Button
-        android:id="@+id/left"
-        android:layout_width="80dp"
-        android:layout_height="60dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="90dp"
-        android:background="@drawable/left" />
-
-    <Button
-        android:id="@+id/npc"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_above="@+id/text"
+        android:id="@+id/npv"
+        android:layout_width="250dp"
+        android:layout_height="300dp"
+        android:layout_above="@+id/text3"
         android:layout_alignParentEnd="true"
-        android:background="@drawable/c10" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        app:srcCompat="@android:color/background_dark" />
-
-    <Button
-        android:id="@+id/menu"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="53dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/menu" />
-
-    <Button
-        android:id="@+id/home"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_alignStart="@+id/npc"
-        android:layout_alignTop="@+id/menu"
-        android:background="@drawable/home" />
-
-    <Button
-        android:id="@+id/map"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/menu"
-        android:layout_marginEnd="26dp"
-        android:background="@drawable/map" />
+        android:background="@drawable/c11" />
 </RelativeLayout>
