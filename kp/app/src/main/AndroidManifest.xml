@@ -10,7 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -37,7 +37,9 @@
         <activity android:name=".livier" />
         <activity android:name=".livier_fish" />
         <activity android:name=".atlas" />
-        <activity android:name=".elem"></activity>
+        <activity android:name=".elem" />
+
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>

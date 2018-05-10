@@ -7,43 +7,8 @@
     android:background="@drawable/bg_17"
     tools:context=".atlas">
 
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        app:srcCompat="@android:color/background_dark" />
-
-    <Button
-        android:id="@+id/menu"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="41dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/menu" />
-
-    <Button
-        android:id="@+id/home"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_alignTop="@+id/menu"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/home" />
-
-    <Button
-        android:id="@+id/map"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/menu"
-        android:layout_marginEnd="46dp"
-        android:background="@drawable/map" />
-
     <TextView
-        android:id="@+id/text3"
+        android:id="@+id/text"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_alignParentBottom="true"
@@ -60,7 +25,7 @@
         android:id="@+id/npv"
         android:layout_width="250dp"
         android:layout_height="300dp"
-        android:layout_above="@+id/text3"
+        android:layout_above="@+id/text"
         android:layout_alignParentEnd="true"
         android:background="@drawable/c11" />
 </RelativeLayout>

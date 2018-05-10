@@ -39,7 +39,7 @@ public class DatabaseConnect extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        sqLiteDatabase.execSQL("CREATE TABLE PLAYER( ID INTEGER PRIMARY KEY AUTOINCREMENT, MERCY INTEGER, LOVEONE INTEGER, LOVETWO INTEGER, PROCESS TEXT, ITEM TEXT);");
+        sqLiteDatabase.execSQL("CREATE TABLE PLAYER( ID INTEGER PRIMARY KEY AUTOINCREMENT, LOVEONE INTEGER, LOVETWO INTEGER, PROCESS TEXT, ITEM TEXT);");
     }
 
     @Override
@@ -52,13 +52,11 @@ public class DatabaseConnect extends SQLiteOpenHelper {
         Cursor cursor = this.getReadableDatabase().rawQuery("SELECT * FROM PLAYER WHERE (ID = 0)", null);
         ContentValues cv = new ContentValues();
         cv.put("ID", 0);
-        cv.put("MERCY", 0);
         cv.put("LOVEONE", 0);
         cv.put("LOVETWO", 0);
         cv.put("PROCESS", "0");
         cv.put("ITEM", "0");
         ContentValues cv2 = new ContentValues();
-        cv2.put("MERCY", 0);
         cv2.put("LOVEONE", 0);
         cv2.put("LOVETWO", 0);
         cv2.put("PROCESS", "0");
