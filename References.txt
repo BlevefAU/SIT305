@@ -119,3 +119,6 @@ http://image.baidu.com/search/redirect?tn=redirect&word=j&juid=D28C86&sign=ckeki
 
 snake.jpg
 http://www.16sucai.com/2016/12/104634.html
+
+ss.png
+http://www.aigei.com/view/20732.html
