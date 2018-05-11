@@ -9,7 +9,7 @@
 
 
     <TextView
-        android:id="@+id/show"
+        android:id="@+id/tb"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentStart="true"
@@ -62,7 +62,7 @@
         android:id="@+id/eagle"
         android:layout_width="100dp"
         android:layout_height="80dp"
-        android:layout_below="@+id/show"
+        android:layout_below="@+id/tb"
         android:layout_toEndOf="@+id/snake4"
         android:background="@drawable/eagle"
         android:visibility="invisible" />

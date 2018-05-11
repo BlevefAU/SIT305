@@ -66,9 +66,19 @@ public class big_map extends AppCompatActivity {
             tx9.setVisibility(View.VISIBLE);
         }
 
+        if (Integer.parseInt(String.valueOf(res.getString(0))) >= 21) {
+
+            btn_m8.setVisibility(View.VISIBLE);
+            tx8.setVisibility(View.VISIBLE);
+        }
+
         if(res2.contains("3")== true){
             btn_m2.setVisibility(View.VISIBLE);
             tx2.setVisibility(View.VISIBLE);
+        }
+        if(res2.contains("7")== true){
+            btn_m7.setVisibility(View.VISIBLE);
+            tx7.setVisibility(View.VISIBLE);
         }
         btn_m1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -107,5 +117,23 @@ public class big_map extends AppCompatActivity {
                 startActivity(new Intent(big_map.this, livier.class));
             }
         });
+        btn_m7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(big_map.this, elem.class));
+            }
+        });
+        btn_m8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(big_map.this, atlas.class));
+            }
+        });
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Runtime.getRuntime().gc();
     }
 }

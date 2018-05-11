@@ -101,6 +101,7 @@ public class livier extends AppCompatActivity {
         btn_house.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                finish();
                 startActivity(new Intent(livier.this, home.class));
             }
         });
@@ -109,6 +110,7 @@ public class livier extends AppCompatActivity {
         btn_map.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                finish();
                 startActivity(new Intent(livier.this, big_map.class));
             }
         });
@@ -117,9 +119,15 @@ public class livier extends AppCompatActivity {
         btn_menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                finish();
                 startActivity(new Intent(livier.this, MainActivity.class));
             }
         });
 
+    }
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Runtime.getRuntime().gc();
     }
 }

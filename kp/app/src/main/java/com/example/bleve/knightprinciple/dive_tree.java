@@ -35,11 +35,11 @@ public class dive_tree extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dive_tree);
 
-        final Button btn_back = (Button) findViewById(R.id.back);
-        final Button btn_b1 =  (Button) findViewById(R.id.b1);
-        final Button btn_b2 =  (Button) findViewById(R.id.b2);
-        final Button btn_b3 =  (Button) findViewById(R.id.b3);
-        final Button btn_b4 =  (Button) findViewById(R.id.b4);
+        Button btn_back = (Button) findViewById(R.id.back);
+        Button btn_b1 =  (Button) findViewById(R.id.b1);
+        Button btn_b2 =  (Button) findViewById(R.id.b2);
+        Button btn_b3 =  (Button) findViewById(R.id.b3);
+        Button btn_b4 =  (Button) findViewById(R.id.b4);
         final TextView text_show = (TextView)findViewById(R.id.text);
 
         connectionClass = new DatabaseConnect(this,"",null,1);
@@ -205,5 +205,11 @@ public class dive_tree extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Runtime.getRuntime().gc();
     }
 }

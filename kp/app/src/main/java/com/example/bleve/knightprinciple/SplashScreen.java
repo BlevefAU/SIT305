@@ -25,4 +25,9 @@ public class SplashScreen extends AppCompatActivity {
         };
         mythread.start();
     }
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Runtime.getRuntime().gc();
+    }
 }

@@ -1,7 +1,6 @@
 package com.example.bleve.knightprinciple;
 
 import android.content.Intent;
-import android.database.Cursor;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -185,7 +184,7 @@ public class hunt extends AppCompatActivity {
                     }
                     if (score_data > 240){
                         text_show.setVisibility(View.VISIBLE);
-                        connectionClass.add_item("7");
+                        connectionClass.add_item("3");
                         int number;
                         number = connectionClass.load_loveone();
                         number ++;
@@ -212,5 +211,10 @@ public class hunt extends AppCompatActivity {
 
 
 
+    }
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Runtime.getRuntime().gc();
     }
 }

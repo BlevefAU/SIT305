@@ -84,6 +84,7 @@ public class wood extends AppCompatActivity {
         btn_hunt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                finish();
                 startActivity(new Intent(wood.this, hunt.class));
             }
         });
@@ -92,6 +93,7 @@ public class wood extends AppCompatActivity {
         btn_home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                finish();
                 startActivity(new Intent(wood.this, home.class));
             }
         });
@@ -100,6 +102,7 @@ public class wood extends AppCompatActivity {
         btn_menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                finish();
                 startActivity(new Intent(wood.this, menu.class));
             }
         });
@@ -109,8 +112,14 @@ public class wood extends AppCompatActivity {
         btn_map.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                finish();
                 startActivity(new Intent(wood.this, big_map.class));
             }
         });
+    }
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Runtime.getRuntime().gc();
     }
 }

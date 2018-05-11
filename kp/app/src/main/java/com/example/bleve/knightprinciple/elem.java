@@ -25,15 +25,55 @@ public class elem extends AppCompatActivity {
             "I guess.. it belong to me.",
             "Diary: I am dying... It is really hurt(Cant read some)",
             "Diary: I need to sleep until next time I weak up...(Cant read some)",
-            "Diary: When you get this kill yourself so you are not been used."
+            "Diary: When you get this kill yourself so you are not been used.",
+            "I am the king of darkness...Really.",
+            "Tedy:\n Do not believe it Kata.",
+            "I am not Kata, I am king Atlas. I need to head to my palace.",
+            "Tedy:\n No way...",
+            "I will end this now.(You get dairy)"
     };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_elem);
+
+        connectionClass = new DatabaseConnect(this,"",null,1);
         final TextView text_show = (TextView)findViewById(R.id.text);
         final Button btn_book =  (Button) findViewById(R.id.book);
+
+        final Button btn_menu = (Button) findViewById(R.id.menu);
+        final Button btn_map = (Button) findViewById(R.id.map);
+        final Button btn_home = (Button) findViewById(R.id.home);
+
+
+        btn_menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+                startActivity(new Intent(elem.this, menu.class));
+            }
+        });
+
+        btn_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+                startActivity(new Intent(elem.this, home.class));
+            }
+        });
+
+        btn_map.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+                startActivity(new Intent(elem.this, big_map.class));
+            }
+        });
+
+
+
+
         btn_book.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -71,5 +111,10 @@ public class elem extends AppCompatActivity {
                 }
             }
         });
+    }
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Runtime.getRuntime().gc();
     }
 }

@@ -1,6 +1,8 @@
 package com.example.bleve.knightprinciple;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,6 +17,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // background music play
+        MediaPlayer bgmplayer = MediaPlayer.create(this, R.raw.melody2);
+        bgmplayer.setLooping(true);
+        bgmplayer.start();
+
         connectionClass = new DatabaseConnect(this,"",null,1);
 
         final TextView info = (TextView) findViewById(R.id.info);
@@ -25,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         startbtn.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 connectionClass.setup();
+                finish();
                 startActivity(new Intent(MainActivity.this, bg_story.class));
             }
         });
@@ -36,12 +44,17 @@ public class MainActivity extends AppCompatActivity {
                 int num;
                 num = connectionClass.load();
                 if (num == 0) {
-                    startActivity(new Intent(MainActivity.this, bg_story.class));
+                    finish();
+                    startActivity(new Intent(MainActivity.this, first_map.class));
                 } else {
                     info.setVisibility(View.VISIBLE);
                 }
             }
         });
     }
-
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Runtime.getRuntime().gc();
+    }
 }

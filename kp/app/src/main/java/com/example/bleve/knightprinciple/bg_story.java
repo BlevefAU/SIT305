@@ -31,14 +31,20 @@ public class bg_story extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
+                finish();
                 startActivity(new Intent(bg_story.this, home.class));
             }
-        }, 500);
+        }, 6000);
     }
 
     // disable back arrow function
     @Override
     public void onBackPressed() {
 
+    }
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Runtime.getRuntime().gc();
     }
 }

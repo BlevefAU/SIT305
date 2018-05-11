@@ -83,6 +83,7 @@ public class civi extends AppCompatActivity {
         btn_menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                finish();
                 startActivity(new Intent(civi.this, menu.class));
             }
         });
@@ -90,6 +91,7 @@ public class civi extends AppCompatActivity {
         btn_house.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                finish();
                 startActivity(new Intent(civi.this, home.class));
             }
         });
@@ -98,6 +100,7 @@ public class civi extends AppCompatActivity {
         btn_map.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                finish();
                 startActivity(new Intent(civi.this, big_map.class));
             }
         });
@@ -106,6 +109,7 @@ public class civi extends AppCompatActivity {
         btn_right.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                finish();
                 startActivity(new Intent(civi.this, civi_right.class));
             }
         });
@@ -225,5 +229,11 @@ public class civi extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Runtime.getRuntime().gc();
     }
 }

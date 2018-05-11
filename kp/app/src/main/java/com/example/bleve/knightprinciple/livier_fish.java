@@ -24,7 +24,9 @@ public class livier_fish extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_livier_fish);
         connectionClass = new DatabaseConnect(this,"",null,1);
-        final TextView text_show = (TextView)findViewById(R.id.show);
+        final TextView text_show = (TextView)findViewById(R.id.tb);
+        final TextView text_ruby = (TextView)findViewById(R.id.ruby_text);
+
         final Button btn_fish =  (Button) findViewById(R.id.fish_start);
         final Button btn_up =  (Button) findViewById(R.id.up);
         final Button btn_ruby =  (Button) findViewById(R.id.ruby);
@@ -42,7 +44,11 @@ public class livier_fish extends AppCompatActivity {
         btn_ruby.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                connectionClass.add_item("3");
+                String res2 = connectionClass.load_item();
+                if (res2.contains("7")!= true){
+                    connectionClass.add_item("7");
+                    text_ruby.setVisibility(View.VISIBLE);
+                }
             }
 
         });
@@ -89,6 +95,7 @@ public class livier_fish extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 btn_up.setVisibility(View.INVISIBLE);
+                String res2 = connectionClass.load_item();
                 fish_num = rand.nextInt(30);
                 switch (fish_num){
                     case 0:
@@ -133,8 +140,13 @@ public class livier_fish extends AppCompatActivity {
                         text_show.setText("You get a rubish");
                         break;
                     case 29:
-                        text_show.setText("You get a mystery egg.");
-                        connectionClass.add_item("6");
+                        if (res2.contains("6")!= true){
+                            text_show.setText("You get a mystery egg.");
+                            connectionClass.add_item("6");
+                        } else {
+                            text_show.setText("You get nothing");
+                        }
+
                         break;
                     default:
                         text_show.setText("You get nothing");
@@ -143,5 +155,11 @@ public class livier_fish extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Runtime.getRuntime().gc();
     }
 }

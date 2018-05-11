@@ -7,31 +7,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-/**
- * Created by Bleve on 2017/9/1.
- */
-//
-//public class DatabaseConnect extends SQLiteOpenHelper {
-//    public static final String Userdetail = "Userdetail.db";
-//    public static final String Tablename = "user_table";
-//    public static final String COL_1 = "USERNAME";
-//
-//    public DatabaseConnect(Context context) {
-//        super(context, Userdetail, null, 1);
-//        SQLiteDatabase db = this.getWritableDatabase();
-//    }
-//
-//    @Override
-//    public void onCreate(SQLiteDatabase db) {
-//        db.execSQL("create table" + Tablename + "(USERNAME INTEGER PRIMARY KEY AUTOINCREMENT)");
-//    }
-//
-//    @Override
-//    public void onUpgrade(SQLiteDatabase db, int i, int i1) {
-//        db.execSQL("DROP TABLE IF EXITS" + Tablename);
-//        onCreate(db);
-//    }
-//}
 public class DatabaseConnect extends SQLiteOpenHelper {
     public DatabaseConnect(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, "playerdata.db", factory, version);
@@ -48,6 +23,7 @@ public class DatabaseConnect extends SQLiteOpenHelper {
         onCreate(sqLiteDatabase);
     }
 
+    // for start game and cover old data, if there exist any old data
     public void setup(){
         Cursor cursor = this.getReadableDatabase().rawQuery("SELECT * FROM PLAYER WHERE (ID = 0)", null);
         ContentValues cv = new ContentValues();
@@ -68,11 +44,15 @@ public class DatabaseConnect extends SQLiteOpenHelper {
         }
     }
 
+    // for loading game data
     public int load() {
         Cursor cursor = this.getReadableDatabase().rawQuery("SELECT * FROM PLAYER WHERE (ID = 0)", null);
         if (cursor.moveToFirst()) {
+            // if there is data return 0
             return 0;
         } else {
+            // if there is not any data return 1
+
             return 1;
         }
     }
@@ -130,4 +110,6 @@ public class DatabaseConnect extends SQLiteOpenHelper {
         cv.put("LOVEONE", num);
         this.getWritableDatabase().update("PLAYER", cv, "ID = 0" , null);
     }
+
+
 }

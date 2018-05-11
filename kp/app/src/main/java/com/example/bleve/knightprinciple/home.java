@@ -40,6 +40,7 @@ public class home extends AppCompatActivity {
         btn_house.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                finish();
                 startActivity(new Intent(home.this, first_map.class));
             }
         });
@@ -49,6 +50,7 @@ public class home extends AppCompatActivity {
         btn_menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                finish();
                 startActivity(new Intent(home.this, menu.class));
             }
         });
@@ -57,6 +59,7 @@ public class home extends AppCompatActivity {
         btn_map.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                finish();
                 startActivity(new Intent(home.this, big_map.class));
             }
         });
@@ -126,6 +129,13 @@ public class home extends AppCompatActivity {
         final TextView text = (TextView) findViewById(R.id.text);
         text.setVisibility(View.INVISIBLE);
         return false;
+    }
+
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Runtime.getRuntime().gc();
     }
 
 }

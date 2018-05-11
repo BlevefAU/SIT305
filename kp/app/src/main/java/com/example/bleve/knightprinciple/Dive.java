@@ -106,6 +106,7 @@ public class Dive extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
+                finish();
                 startActivity(new Intent(Dive.this, dive_left.class));
             }
         });
@@ -113,6 +114,7 @@ public class Dive extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
+                finish();
                 startActivity(new Intent(Dive.this, dive_right_two.class));
             }
         });
@@ -238,5 +240,12 @@ public class Dive extends AppCompatActivity {
                 startActivity(new Intent(Dive.this, menu.class));
             }
         });
+    }
+
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Runtime.getRuntime().gc();
     }
 }

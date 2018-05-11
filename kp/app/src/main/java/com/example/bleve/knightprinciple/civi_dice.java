@@ -466,4 +466,9 @@ public class civi_dice extends AppCompatActivity {
         });
 
     }
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Runtime.getRuntime().gc();
+    }
 }

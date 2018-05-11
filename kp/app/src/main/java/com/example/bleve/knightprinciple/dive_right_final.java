@@ -92,10 +92,9 @@ public class dive_right_final extends AppCompatActivity {
             final Runnable myRunnable = new Runnable() {
                 public void run() {
                     text_show.setText(text_data[i -1]); // update text
-                    if  (i == text_data.length -1  ){
+                    if  (i == text_data.length - 1){
                         btn_one.setVisibility(View.VISIBLE);
                         btn_two.setVisibility(View.VISIBLE);
-
                     }
                 }
             };
@@ -115,5 +114,10 @@ public class dive_right_final extends AppCompatActivity {
             }
 
         });
+    }
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Runtime.getRuntime().gc();
     }
 }
