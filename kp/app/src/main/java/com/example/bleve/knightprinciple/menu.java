@@ -23,6 +23,12 @@ public class menu extends AppCompatActivity {
         connectionClass = new DatabaseConnect(this,"",null,1);
 
         String process = "You wake up in a unknow place. You do not have any memorize, not even your name. You decided to go out and look what happened.";
+        String process2 = "You meet Tedy and she is in civi, she said she will help you.";
+        String process3 = "You are in the wood and go hunt to get access to mystery place.";
+        String process4 = "Looking for the king who just in Dive to seek your identify.";
+        String process5 = "Facing the curse of your live in elem.";
+        String process6 = "Go to Atlas";
+
 
         final TextView quest = (TextView) findViewById(R.id.quest);
         final ImageView i1 = (ImageView)findViewById(R.id.i1);
@@ -39,10 +45,27 @@ public class menu extends AppCompatActivity {
 
         String res2 = connectionClass.load_item();
 
-        if (Integer.parseInt(String.valueOf(res.getString(0))) == 0 || Integer.parseInt(String.valueOf(res.getString(0))) == 1 || Integer.parseInt(String.valueOf(res.getString(0))) == 2) {
+        if (Integer.parseInt(String.valueOf(res.getString(0))) <= 2) {
             quest.setText(process);
         }
 
+        if (Integer.parseInt(String.valueOf(res.getString(0))) > 2 && Integer.parseInt(String.valueOf(res.getString(0))) < 6 ) {
+            quest.setText(process2);
+        }
+        if (Integer.parseInt(String.valueOf(res.getString(0))) >= 6 && Integer.parseInt(String.valueOf(res.getString(0))) < 10 ) {
+            quest.setText(process3);
+        }
+        if (Integer.parseInt(String.valueOf(res.getString(0))) >= 10 && Integer.parseInt(String.valueOf(res.getString(0))) < 19 ) {
+            quest.setText(process4);
+        }
+
+        if (Integer.parseInt(String.valueOf(res.getString(0))) >= 19 && Integer.parseInt(String.valueOf(res.getString(0))) < 20 ) {
+            quest.setText(process5);
+        }
+
+        if (Integer.parseInt(String.valueOf(res.getString(0))) >= 20 && Integer.parseInt(String.valueOf(res.getString(0))) <= 21 ) {
+            quest.setText(process6);
+        }
         if(res2.contains("1")== true){
             i1.setImageResource(R.drawable.map_item);
             Log.d("test",res2);
@@ -95,6 +118,8 @@ public class menu extends AppCompatActivity {
         btn_exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopService(new Intent(getApplicationContext(), bgm.class));
+
                 startActivity(new Intent(menu.this, MainActivity.class));
             }
         });

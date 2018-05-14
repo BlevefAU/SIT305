@@ -17,14 +17,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // background music play
-        MediaPlayer bgmplayer = MediaPlayer.create(this, R.raw.melody2);
-        bgmplayer.setLooping(true);
-        bgmplayer.start();
+
 
         connectionClass = new DatabaseConnect(this,"",null,1);
 
         final TextView info = (TextView) findViewById(R.id.info);
+
+        // play bgm
+        startService(new Intent(this, bgm.class));
 
         //Intialization Button
         Button startbtn = (Button) findViewById(R.id.start);
@@ -49,6 +49,15 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     info.setVisibility(View.VISIBLE);
                 }
+            }
+        });
+
+        Button btn_exit = (Button) findViewById(R.id.exit);
+        btn_exit.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+        stopService(new Intent(getApplicationContext(), bgm.class));
+
+                System.exit(0);
             }
         });
     }

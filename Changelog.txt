@@ -1,5 +1,66 @@
-Date: 2018.3.27
-Content: Upload the main file of project and framework of the game into github
+Date: 2018.3.27 -
+Content: Upload the project file of project and framework of the game into github
 
 ###################
+
+
+Date: 2018.3.29 -Make database class and add anmation to character
+
+First Week Summary:
+The main file and project upload into github, I have made a database class and some animation for them.
+
+Date: 2018.4.1 -Keep fill up the database class and try to make a character class to store data(cancel the attribute of character when finish game)
+Date: 2018.4.3 -First page of the game, make the home page.
+Date: 2018.4.6 -Add some text content to first map's NPC.
+
+
+Second Week Summary:
+The database is almost complete but still require more modifies to make it prefect.Making the first page of game.
+
+
+
+Date: 2018.4.10 -Keep build up database
+Date: 2018.4.11 -Make the loading system. So that user can load their game's data
+Date: 2018.4.13 -Start  game and load game database setup and fully test
+
+Third Week Summary:
+Build up database for save and load system
+
+
+Date: 2018.4.20 -Map UI build up
+Date: 2018.4.21 -Making the big map so player can move map there
+Date: 2018.4.22 -Bug fixing
+Date: 2018.4.24 -Build up a city map
+
+
+FifthWeek Summary:
+Build up the big map for player to moving map, and first city map build up
+
+
+Date: 2018.4.28 -Put more content, build two more map
+Date: 2018.4.29 -Make dice game in city map
+
+Sixth Week Summary:
+Dice game made up and test. More content for playing
+
+Date: 2018.5.2 -Make hunting game
+Date: 2018.5.3 -Item add up and menu page shows up
+Date: 2018.5.4 -Put more content
+Date: 2018.5.5 -Three more map UI build up
+
+Seventh Summary:
+Hunting game build up and more content and more maps coming
+
+
+Date: 2018.5.8 -All map done
+Date: 2018.5.9 -Fish game building up
+Date: 2018.5.10 -endings all done
+Date: 2018.5.11 -Start test and bug fix (like JVM outofMemorry)
+
+Eighth Week Summary:
+Make all the map and ending all done, fish game done, bug fix up.
+
+
+
+Date: 2018.5.13 -Make the video to demonstration the game
 

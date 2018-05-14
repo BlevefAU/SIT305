@@ -45,6 +45,7 @@ public class mystery extends AppCompatActivity {
         btn_npc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Cursor res = connectionClass.load_process();
                 res.moveToFirst();
                 if (Integer.parseInt(String.valueOf(res.getString(0))) <= 9) {

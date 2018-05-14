@@ -1,4 +1,26 @@
+Develop by: 
+Yiyi Lin
+ID: 215326553
+
+
+Aim for:
+Android 6.0, API 23
+
+
+Github address:
+https://github.com/BlevefAU/SIT305
+
+
+App title:
 Knight Principle
 
-Story Background:
-The land is called "Howal". In legend, the hero comes from "Atlas" (A legend city) had defend the land from king of darkness. It is being five hundred years passed. A dark mage called "Silver" spend thirty years to revive the king of darkness. Due to the revive of king, many monsters come out from hell to attack people and search for their king (because the king is rebirth in a random place), they want to follow the king and drag the world into darkness. Our protagonist is a young man who just weak up from unconscious in a small village. He can't remember anything and do not have any idea who he is. Only one thing in his mind is that, he has to reach "Atlas" And the story begins¡­.
+
+
+App Overview:
+This application is a RPG game develop for android using android studio. In this game, you are request to play as a man who just wake up from unconscious and start looking for your memorise.
+
+
+Major features:
+1. The game have three different ending, so player should try to seek out all the requestment to get all the endings
+2. There are three small game in this game, dice, hunting and finishing.
+3. If player doing some right choice in the game, they will increase love level with another NPC so that will make the content become a bit different.

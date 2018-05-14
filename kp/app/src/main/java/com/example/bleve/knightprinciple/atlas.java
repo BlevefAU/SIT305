@@ -17,6 +17,7 @@ public class atlas extends AppCompatActivity {
     final Timer myTimer = new Timer();
     final Handler myHandler = new Handler();
     int i =0;
+    boolean click = false;
     String [] text_data = {
             "Siliver:\n You finally come in my lord.",
             "I guess I have not choice but come to here.",
@@ -98,24 +99,28 @@ public class atlas extends AppCompatActivity {
         btn_npc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int res = connectionClass.load_loveone();
-                // if love level not height enough will turn to another conversation
-                if (res >= 3) {
-                    // Timer
-                    TimerTask myTask = new TimerTask() {
-                        public void run() {
-                            update_text(); // text update method
-                        }
-                    };
-                    myTimer.schedule(myTask,0,3000); // TimerTask, delay, period
-                } else {
-                    TimerTask myTask = new TimerTask() {
-                        public void run() {
-                            update_text2(); // text update method
-                        }
-                    };
-                    myTimer.schedule(myTask,0,3000); // TimerTask, delay, period
+                if (click == false ){
+                    int res = connectionClass.load_loveone();
+                    // if love level not height enough will turn to another conversation
+                    if (res >= 3) {
+                        // Timer
+                        TimerTask myTask = new TimerTask() {
+                            public void run() {
+                                update_text(); // text update method
+                            }
+                        };
+                        myTimer.schedule(myTask,0,3000); // TimerTask, delay, period
+                    } else {
+                        TimerTask myTask = new TimerTask() {
+                            public void run() {
+                                update_text2(); // text update method
+                            }
+                        };
+                        myTimer.schedule(myTask,0,3000); // TimerTask, delay, period
+                    }
+                    click = true;
                 }
+
             }
             // Runnable method
             final Runnable myRunnable = new Runnable() {
